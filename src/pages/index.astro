@@ -1,15 +1,21 @@
 ---
+import MainLayout from "../layouts/mainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Home">
+	<div class="p-6">
+		<nav class="flex justify-between items-center">
+			<div class="flex gap-x-48 items-center">
+				<h1 class="text-2xl font-bold">Metro</h1>
+				<div class="desktop:w-80 laptop:w-80 max-w-xs flex py-2 text-sm px-3 rounded-lg bg-light-gray gap-3">
+					<img src="/icons/search.svg" alt="">
+					<input class="bg-light-gray/0 focus:outline-none" type="text" placeholder="Search">
+				</div>
+			</div>
+			<div class="flex gap-5">
+				<img src="/icons/bell.svg" alt="">
+				<img src="/icons/user.svg" alt="">
+			</div>
+		</nav>
+	</div>
+</MainLayout>
